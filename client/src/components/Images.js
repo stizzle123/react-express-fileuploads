@@ -25,16 +25,16 @@ class Images extends React.Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul style={{ listStyleType: "none" }}>
           {this.state.loading === true ? (
             <p>Loading...</p>
           ) : (
             this.state.images.map(image => (
-              <li key={image._id}>
+              <li key={image._id} style={{ listStyleType: "none" }}>
                 <img
                   src={image.img.filePath}
                   alt={image.img.fileName}
-                  className="img-thumbnail"
+                  className="img-thumbnail mt-4"
                 />
               </li>
             ))
